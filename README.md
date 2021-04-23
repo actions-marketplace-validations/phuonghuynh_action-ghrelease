@@ -1,5 +1,7 @@
 # action-ghrelease
 
+Fork and enhance from original repository: https://github.com/softprops/action-gh-release
+
 Check `action.yml` for inputs
 
 ### Sample usage
