@@ -130,6 +130,7 @@ export const upload = async (
   path: string
 ): Promise<any> => {
   let { name, size, mime, file } = asset(path);
+  const data = file;
   console.log(`⬆️ Uploading ${name}...`);
   return await gh.repos.uploadReleaseAsset({
     url,
@@ -138,7 +139,7 @@ export const upload = async (
       "content-type": mime
     },
     name,
-    file
+    data
   });
 };
 
