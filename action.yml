@@ -1,7 +1,6 @@
-# https://help.github.com/en/articles/metadata-syntax-for-github-actions
-name: 'GH Release'
-description: 'Github Action for creating Github Releases'
-author: 'softprops'
+name: 'GitHub Release Action'
+description: 'Forking https://github.com/softprops/action-gh-release'
+author: 'phuonghuynh'
 inputs:
   body:
     description: 'Note-worthy description of changes in release'
@@ -27,11 +26,16 @@ inputs:
   fail_on_unmatched_files:
     description: 'Fails if any of the `files` globs match nothing. Defaults to false'
     required: false
+  commitish:
+    description: 'Can be any branch or commit SHA'
+    required: false
   repository:
     description: 'Repository to make releases against, in <owner>/<repo> format'
     required: false
-env:
-  'GITHUB_TOKEN': 'As provided by Github Actions'
+#env:
+#  'GITHUB_TOKEN': 'As provided by Github Actions'
+#  'GITHUB_REPOSITORY': 'custom GH owner/repo'
+#  'GITHUB_REF': 'branch or GITHUB_REF'
 outputs:
   url:
     description: 'URL to the Release HTML Page'

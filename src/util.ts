@@ -41,7 +41,7 @@ export const parseInputFiles = (files: string): string[] => {
 export const parseConfig = (env: Env): Config => {
   return {
     github_token: env.GITHUB_TOKEN || "",
-    github_ref: env.GITHUB_REF || "",
+    github_ref: env.GITHUB_REF || env.INPUT_COMMITISH || "",
     github_repository: env.INPUT_REPOSITORY || env.GITHUB_REPOSITORY || "",
     input_name: env.INPUT_NAME,
     input_tag_name: env.INPUT_TAG_NAME,
