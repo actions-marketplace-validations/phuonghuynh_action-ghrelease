@@ -1,4 +1,4 @@
-name: 'GitHub Release Action'
+name: action-ghrelease
 description: 'Forking https://github.com/softprops/action-gh-release'
 author: 'phuonghuynh'
 inputs:
